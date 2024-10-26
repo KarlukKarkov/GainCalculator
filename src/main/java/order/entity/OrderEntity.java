@@ -12,6 +12,8 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
+import portfolio.entity.PortfolioEntity;
+import stock.entity.StockEntity;
 
 @Getter
 @Setter
@@ -23,8 +25,8 @@ public class OrderEntity {
 	private int orderID;
 	
 	@ManyToOne
-	@JoinColumn(name = "stockID", referencedColumnName = "stockID")
-	private int stockID;
+	@JoinColumn(name = "stockID")
+	private StockEntity stockID;
 	
 	@Column(name="start_date")
 	private Date startDate; //no start date= start in 2015 1 january
@@ -33,8 +35,12 @@ public class OrderEntity {
 	@Column(name= "frequency")
 	private Frequency frequency; //no frequency= no autoinvest
 	
-	@Column(name= "buy_price")
-	private double buyPrice;
+	@Column(name= "buy_price", scale = 2)
+	private double buyPrice;    //derived
+	
+	@ManyToOne
+	@JoinColumn(name= "portfolio")
+	private PortfolioEntity portfolio;
 	
 	
 }

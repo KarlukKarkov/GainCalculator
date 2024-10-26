@@ -2,6 +2,7 @@ package market.entity;
 
 import org.aspectj.weaver.tools.Trace;
 
+import currency.entity.CurrencyEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -27,7 +28,7 @@ public class MarketEntity {
 	private String marketCode;
 	
 	@ManyToOne
-	@JoinColumn(name = "currency", nullable= false, referencedColumnName = "currencyID")
-	private int currency;
+	@JoinColumn(name="currency", nullable = false)
+	private CurrencyEntity currency;
 	
 }
