@@ -1,34 +1,29 @@
 package market.entity;
 
-import org.aspectj.weaver.tools.Trace;
-
 import currency.entity.CurrencyEntity;
 import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
-@Entity
-@Table(name = "MARKET")
-public class MarketEntity {
+@NoArgsConstructor
+public class MarketModel {
 	
-	@Id
+	@NotNull
 	private Long marketID;
 	
-	@Column(name = "market", nullable = false, unique = true)
+	@NotNull
 	private String marketName;
 	
-	@Column(name= "market_code", nullable = false, unique = true)
+	@NotNull
 	private String marketCode;
 	
-	@ManyToOne
-	@JoinColumn(name="currency", nullable = false)
+	@NotNull
 	private CurrencyEntity currency;
-	
 }

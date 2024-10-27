@@ -23,7 +23,7 @@ import order.entity.OrderEntity;
 public class PortfolioEntity {
 	
 	@Id
-	private int portfolioID;
+	private Long portfolioID;
 	
 	@ManyToOne
 	@JoinColumn(name= "currencyID", referencedColumnName = "currencyID")

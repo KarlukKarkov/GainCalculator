@@ -22,7 +22,7 @@ import stock.entity.StockEntity;
 public class OrderEntity {
 	
 	@Id
-	private int orderID;
+	private Long orderID;
 	
 	@ManyToOne
 	@JoinColumn(name = "stockID")
