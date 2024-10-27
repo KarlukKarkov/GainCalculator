@@ -14,7 +14,7 @@ import lombok.Setter;
 public class CurrencyEntity {
 	
 	@Id
-	private Long currencyID;
+	private Long id;
 	
 	@Column(name = "Currency_Code",nullable = false, unique = true)
 	private String currencyCode;

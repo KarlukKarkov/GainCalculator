@@ -23,7 +23,7 @@ import order.entity.OrderEntity;
 public class PortfolioEntity {
 	
 	@Id
-	private Long portfolioID;
+	private Long id;
 	
 	@ManyToOne
 	@JoinColumn(name= "currencyID", referencedColumnName = "currencyID")
@@ -36,6 +36,6 @@ public class PortfolioEntity {
 	private double accountBalance;
 	
 	@ManyToOne
-	@JoinColumn(name = "comparator", referencedColumnName = "comparatorID")
+	@JoinColumn(name = "comparator")
 	private ComparatorEntity comparator;
 }

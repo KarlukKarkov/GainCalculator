@@ -13,7 +13,7 @@ import static jakarta.persistence.GenerationType.AUTO;
 public class StockEntity {
 	
 	@Id
-	private Long stockID;
+	private Long id;
 	
 	@Column(unique = true, nullable = false, name = "Stock_Name")
 	private String stockName;
@@ -22,7 +22,7 @@ public class StockEntity {
 	private String stockCode;
 	
 	@ManyToOne
-	@JoinColumn(name ="market_id", referencedColumnName = "marketID")
+	@JoinColumn(name ="market_id")
 	private int market;
 	
 	

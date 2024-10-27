@@ -16,7 +16,7 @@ import lombok.Setter;
 public class MarketModel {
 	
 	@NotNull
-	private Long marketID;
+	private Long id;
 	
 	@NotNull
 	private String marketName;

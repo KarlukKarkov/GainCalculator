@@ -36,7 +36,7 @@ public class MarketService {
 		MarketModel model= new MarketModel();
 		model.setCurrency(entity.getCurrency());
 		model.setMarketCode(entity.getMarketCode());
-		model.setMarketID(entity.getMarketID());
+		model.setId(entity.getId());
 		model.setMarketName(entity.getMarketName());
 		return model;
 	}

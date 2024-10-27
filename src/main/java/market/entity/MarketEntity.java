@@ -19,7 +19,7 @@ import lombok.Setter;
 public class MarketEntity {
 	
 	@Id
-	private Long marketID;
+	private Long id;
 	
 	@Column(name = "market", nullable = false, unique = true)
 	private String marketName;

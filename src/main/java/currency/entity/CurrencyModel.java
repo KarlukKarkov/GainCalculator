@@ -11,7 +11,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class CurrencyModel {
 	
-	private Long currencyID;
+	private Long id;
 	
 	private String currencyCode;
 	

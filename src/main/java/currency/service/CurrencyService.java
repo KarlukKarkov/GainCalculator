@@ -36,7 +36,7 @@ public class CurrencyService {
 	//used locally
 	private CurrencyModel convertToModel(CurrencyEntity entity) {
 		CurrencyModel model= new CurrencyModel();
-		model.setCurrencyID(entity.getCurrencyID());
+		model.setId(entity.getId());
 		model.setCurrencyCode(entity.getCurrencyCode());
 		model.setCurrencyName(entity.getCurrencyName());
 		return model;
